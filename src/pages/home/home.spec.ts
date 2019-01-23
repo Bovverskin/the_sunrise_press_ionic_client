@@ -33,4 +33,14 @@ describe("HomePage", () => {
         expect(homepage instanceof HomePage).toEqual(true);
     });
 
+    it('should have a articles', () => {
+        expect(homepage.article).toEqual({ title: 'newsy', 
+            description: 'this is a description', 
+            image: '.src/assets/imgs/donut.png'});
+    });
+
+    it('should have "read" button', () => {
+        expect(homepage).toEqual({ button: 'read' });
+    });
+
 });
