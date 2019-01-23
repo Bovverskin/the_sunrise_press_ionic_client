@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Angular2TokenService } from 'angular2-token';
 
 import { HomePage } from '../pages/home/home';
 
@@ -15,12 +16,20 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    private _tokenService: Angular2TokenService) {
+      this._tokenService.init({
+        apiBase: 'https://the-sunrise-press.herokuapp.com/api'
+      });
 
-    this.pages = [
-      { title: 'Home', component: HomePage }
-    ];
+      this.initializeApp();
+
+      this.pages = [
+        { title: 'Home', component: HomePage }
+      ];
 
   }
 
