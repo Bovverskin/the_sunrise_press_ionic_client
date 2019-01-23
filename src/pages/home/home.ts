@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -8,11 +8,17 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   article: any = {};
 
-  constructor(public navCtrl: NavController) {
-    this.article = { title: 'newsy', 
-    description: 'this is a description', 
-    image: '.src/assets/imgs/donut.png' };
+  constructor(
+    public navCtrl: NavController,
+    public modalCtrl: ModalController) {
+      this.article = {
+        title: 'newsy',
+        description: 'this is a description',
+        image: '.src/assets/imgs/donut.png'
+      };
+    }
 
+  read() {
+    this.modalCtrl.create(ArticlePage).present();
   }
-
 }
