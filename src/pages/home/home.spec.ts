@@ -39,8 +39,10 @@ describe("HomePage", () => {
             image: '.src/assets/imgs/donut.png'});
     });
 
-    it('should have "read" button', () => {
-        expect(homepage).toEqual({ button: 'read' });
+    it('should have read function', () => {
+        spyOn(homepage, 'read');
+        homepage.read()
+        expect(homepage.read).toHaveBeenCalled();
     });
 
 });
