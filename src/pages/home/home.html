@@ -9,14 +9,14 @@
 <ion-content>
   <div *ngFor="let article of articles">
        <ion-card>
+          <ion-img class="news-image" src='./assets/imgs/breakingnews.png'></ion-img>
       <ion-card-header>
-          {{article.title}}
+          <h2>{{article.title}}</h2>
       </ion-card-header>
       <ion-card-content>
-          {{article.description}}
+          <p>{{article.description}}</p>
       </ion-card-content>
-      <ion-img style="width: 300px; height: 150px;" src='./assets/imgs/breakingnews.png'></ion-img>
-      <button block ion-button (click)="read()">Read</button>
+      <button class="read-button" ion-button (click)="read()">Read</button>
     </ion-card>
   </div>
  

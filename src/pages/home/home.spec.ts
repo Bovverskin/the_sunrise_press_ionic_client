@@ -36,7 +36,7 @@ describe("HomePage", () => {
     it('should have a articles', () => {
         expect(homepage.article).toEqual({ title: 'newsy', 
             description: 'this is a description', 
-            image: '.src/assets/imgs/donut.png'});
+            image: '.src/assets/imgs/breakingnews.png'});
     });
 
     it('should have read function', () => {
