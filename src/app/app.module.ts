@@ -1,6 +1,5 @@
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { Angular2TokenService } from 'angular2-token';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -36,7 +35,6 @@ import { ArticleDataProvider } from '../providers/article-data/article-data';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Angular2TokenService,
     ArticleDataProvider
   ]
 })

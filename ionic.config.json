@@ -1,5 +1,7 @@
 {
   "name": "the_sunrise_press_ionic_client",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

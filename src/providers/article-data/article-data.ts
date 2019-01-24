@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Angular2TokenService } from 'angular2-token';
-import 'rxjs/add/operator/map';
+import { Http } from '@angular/http';
+import 'rxjs/operators';
 
 @Injectable()
 export class ArticleDataProvider {
 
-  constructor(private _tokenService: Angular2TokenService) {}
+  constructor(private http: Http) {}
 
-  getArticle() {
-    return this._tokenService
-      .get('article_data')
-      .map(articles => articles.json());
+  getArticles() {
+    return this.http
+      .get('http://localhost:3000/api/articles')
   }
 
 }
