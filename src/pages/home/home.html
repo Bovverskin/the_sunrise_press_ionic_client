@@ -6,14 +6,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-img style="width: 285px; height: 60px;"src="../assets/imgs/logo.blue.png"></ion-img>
-  <ion-card *ngFor="let article of articles">
+<ion-content *ngFor="let article of articles">
+  <!--<ion-img style="width: 285px; height: 60px;"src="../assets/imgs/logo.blue.png"></ion-img>-->
+  <ion-card>
     <ion-card-header>
         {{article.title}}
     </ion-card-header>
     <ion-card-content>
-        {(article.description)}
+        {{article.description}}
     </ion-card-content>
     <ion-img style="width: 300px; height: 150px;" src='./assets/imgs/breakingnews.png'></ion-img>
     <button block ion-button (click)="read()">Read</button>

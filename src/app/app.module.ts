@@ -12,6 +12,7 @@ import { ArticlePage } from '../pages/article/article';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ArticleDataProvider } from '../providers/article-data/article-data';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Angular2TokenService
+    Angular2TokenService,
+    ArticleDataProvider
   ]
 })
 export class AppModule {}
