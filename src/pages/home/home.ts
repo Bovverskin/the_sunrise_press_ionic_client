@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { ArticlesDataProvider } from '../../providers/articles-data/articles-data';
-import { ArticlePage } from '../article/article';
 import 'rxjs/add/operator/map';
 
 
@@ -18,10 +17,6 @@ export class HomePage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController) {
-  }
-
-  read() {
-    this.modalCtrl.create(ArticlePage).present();
   }
 
   ngOnInit() {

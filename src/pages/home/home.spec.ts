@@ -47,11 +47,4 @@ describe("HomePage", () => {
         expect(homepage).toBeTruthy();
         expect(homepage instanceof HomePage).toEqual(true);
     });
-
-    it('should have read function', () => {
-        spyOn(homepage, 'read');
-        homepage.read()
-        expect(homepage.read).toHaveBeenCalled();
-    });
-
 });
