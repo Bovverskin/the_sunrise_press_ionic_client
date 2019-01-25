@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/operators';
 
 @Injectable()
-export class ArticleDataProvider {
+export class ArticlesDataProvider {
 
   constructor(private http: Http) {}
 
